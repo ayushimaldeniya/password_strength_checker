@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.security-dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #21262d;
+  padding-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  color: #58a6ff;
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.dashboard-header p {
+  color: #8b949e;
+  margin: 0;
+  font-size: 1.1rem; /* Makes the text slightly larger and easier to read */
+  font-family: 'Segoe UI', sans-serif; /* Changes it from raw code font to clean text */
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.defense-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(88, 166, 255, 0.1);
+}
+
+.defense-card h2 {
+  color: #f0f6fc;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #21262d;
+  padding-bottom: 10px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #f0f6fc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.input-group input:focus {
+  border-color: #58a6ff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #238636;
+  color: #ffffff;
+  border: 1px solid rgba(240, 246, 25fc, 0.1);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2ea043;
+}
+
+button:disabled {
+  background-color: #21262d;
+  color: #8b949e;
+  cursor: not-allowed;
+}
+
+.risk-badge-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.risk-badge {
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.risk-badge.HIGH-RISK { background-color: rgba(248, 81, 73, 0.15); color: #f85149; border: 1px solid #f85149; }
+.risk-badge.MEDIUM-RISK { background-color: rgba(210, 153, 34, 0.15); color: #d29922; border: 1px solid #d29922; }
+.risk-badge.LOW-RISK { background-color: rgba(46, 160, 67, 0.15); color: #56d364; border: 1px solid #3fb950; }
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 1rem;
+}
+
+.text-success { color: #56d364; font-weight: bold; }
+.text-danger { color: #f85149; font-weight: bold; }
+
+.vulnerability-box {
+  background-color: rgba(248, 81, 73, 0.05);
+  border-left: 4px solid #f85149;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+.vulnerability-box h4 { color: #f85149; margin: 0 0 10px 0; }
+.vulnerability-box ul { margin: 0; padding-left: 20px; color: #c9d1d9; font-size: 0.9rem; }
+.vulnerability-box li { margin-bottom: 5px; }
+
+.cryptographic-box {
+  background-color: rgba(56, 139, 253, 0.05);
+  border-left: 4px solid #58a6ff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+.cryptographic-box h4 { color: #58a6ff; margin: 0 0 10px 0; }
+.crypto-snippet { font-size: 0.85rem; margin-bottom: 8px; font-family: monospace; }
+.crypto-snippet code { background-color: #0d1117; padding: 2px 6px; border-radius: 4px; color: #ff7b72; }
+
+.network-error-alert {
+  background-color: rgba(248, 81, 73, 0.1);
+  color: #f85149;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px solid rgba(248, 81, 73, 0.2);
+}
+
+.animate-fade {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Style for dashboard header pictures */
+.icon-img {
+  width: 30px;         /* Keeps the image like an icon */
+  height: 30px;
+  margin-right: 10px;  /* Pushes the text slightly away from the image */
+  vertical-align: middle; /* Keeps the icon aligned nicely with the text line */
+  object-fit: contain; /* Prevents the picture from stretching weirdly */
+}
+
+.icon-img1 {
+  width: 40px;         
+  height: 40px;
+  margin-right: 10px;  
+  vertical-align: middle; 
+  object-fit: contain; 
+}
