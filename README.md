@@ -35,7 +35,7 @@ password_strength_checker/
 ### 1. Backend & AI Engine Setup
 Navigate to the backend directory, initialize a clean Python virtual environment, and install the verified dependencies.
 
-# From the root directory
+#### From the root directory
 cd backend 
 python3 -m venv env
 source env/bin/activate
