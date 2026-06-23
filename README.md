@@ -10,11 +10,11 @@ A full-stack cybersecurity application that uses Machine Learning to evaluate pa
 
 ## Tech Stack & Ecosystem
 
-**Frontend (Interactive Dashboard):** React.js, HTML, CSS
-**Backend (High Performance API):** Python, FastAPI, Uvicorn
-**Machine Learning:** Scikit-learn, Joblib
-**Database (Data Storage):** SQLite
-**Security:** SHA-256 Hashing with Salt
+* **Frontend (Interactive Dashboard):** React.js, HTML, CSS
+* **Backend (High Performance API):** Python, FastAPI, Uvicorn
+* **Machine Learning:** Scikit-learn, Joblib
+* **Database (Data Storage):** SQLite
+* **Security:** SHA-256 Hashing with Salt
 
 ## Project Structure
 
